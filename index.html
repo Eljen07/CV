@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name | Aspiring Software Developer</title>
+    <meta
+      name="description"
+      content="Personal CV website of Your Name, an Information Technology student."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="loader-ring"></div>
+      <span>Loading portfolio…</span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="progress" id="progress"></div>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+      <a href="#home" class="logo">YN<span>.</span></a>
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="links" id="links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+        <button
+          class="theme-toggle"
+          id="theme"
+          aria-label="Toggle dark / light theme"
+        >
+          ◐
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 1. PERSONAL PROFILE -->
+      <section class="hero" id="home">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>Your Full Name</h1>
+          <h2 class="typing">
+            <span id="typed"></span><span class="cursor">|</span>
+          </h2>
+          <p class="lead">
+            I am a motivated Information Technology student who enjoys building
+            clean, useful web applications and learning new technologies.
+            (Replace this with your own short introduction.)
+          </p>
+          <div class="objective">
+            <strong>Career Objective:</strong> To secure an internship where I
+            can apply my web development skills, grow as a developer, and
+            contribute to real-world projects.
+          </div>
+          <div class="cta">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn ghost">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <div class="photo-frame">
+            <!-- Put your photo at assets/profile.jpg -->
+            <img
+              src="assets/profile.jpg"
+              alt="Profile picture of Your Name"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'grid';
+              "
+            />
+            <div class="avatar-fallback">YN</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. BASIC INFORMATION -->
+      <section id="about">
+        <h2 class="section-title reveal">Basic Information</h2>
+        <div class="grid info-grid">
+          <div class="card reveal">
+            <span class="ico">📍</span>
+            <h3>Location</h3>
+            <p>Davao City, Philippines</p>
+          </div>
+          <div class="card reveal">
+            <span class="ico">✉️</span>
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:youremail@example.com">youremail@example.com</a>
+            </p>
+          </div>
+          <div class="card reveal">
+            <span class="ico">📞</span>
+            <h3>Contact</h3>
+            <p>+63 900 000 0000</p>
+          </div>
+          <div class="card reveal">
+            <span class="ico">💡</span>
+            <h3>Career Interests</h3>
+            <p>Web Development, UI/UX, Databases</p>
+          </div>
+        </div>
+        <p class="about-text reveal">
+          I'm a curious and hardworking learner who enjoys turning ideas into
+          working software. I like solving problems, collaborating with
+          teammates, and continuously improving my craft. (Replace with your own
+          personal description.)
+        </p>
+      </section>
+
+      <!-- 3. EDUCATION -->
+      <section id="education">
+        <h2 class="section-title reveal">Education</h2>
+        <div class="timeline">
+          <div class="t-item reveal">
+            <span class="dot"></span>
+            <div class="card">
+              <span class="date">2023 – Present</span>
+              <h3>Bachelor of Science in Information Technology</h3>
+              <p>Your University Name — 3rd Year</p>
+              <ul>
+                <li>Dean's Lister (add your real academic achievements)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="t-item reveal">
+            <span class="dot"></span>
+            <div class="card">
+              <span class="date">2021 – 2023</span>
+              <h3>Senior High School — STEM / ICT Strand</h3>
+              <p>Your Senior High School Name</p>
+              <ul>
+                <li>With Honors (edit or remove)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SKILLS -->
+      <section id="skills">
+        <h2 class="section-title reveal">
+          Technical &amp; Professional Skills
+        </h2>
+        <div class="skills-wrap">
+          <div class="card reveal">
+            <h3>Technical</h3>
+            <div class="skill">
+              <div class="skill-head"><span>HTML</span><span>90%</span></div>
+              <div class="bar"><i data-level="90"></i></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head"><span>CSS</span><span>85%</span></div>
+              <div class="bar"><i data-level="85"></i></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head">
+                <span>JavaScript</span><span>75%</span>
+              </div>
+              <div class="bar"><i data-level="75"></i></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head">
+                <span>Git &amp; GitHub</span><span>70%</span>
+              </div>
+              <div class="bar"><i data-level="70"></i></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head">
+                <span>Database (MySQL)</span><span>65%</span>
+              </div>
+              <div class="bar"><i data-level="65"></i></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head"><span>Python</span><span>60%</span></div>
+              <div class="bar"><i data-level="60"></i></div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <h3>Professional</h3>
+            <div class="chips">
+              <span class="chip">🧩 Problem Solving</span>
+              <span class="chip">💬 Communication</span>
+              <span class="chip">🤝 Teamwork</span>
+              <span class="chip">⏱️ Time Management</span>
+              <span class="chip">🎨 UI/UX Design</span>
+              <span class="chip">📚 Fast Learner</span>
+            </div>
+            <h3 class="mt">Tools</h3>
+            <div class="chips">
+              <span class="chip">VS Code</span><span class="chip">Figma</span
+              ><span class="chip">Vercel</span><span class="chip">Node.js</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 & 6. PROJECTS + GITHUB -->
+      <section id="projects">
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="grid projects">
+          <article class="project reveal">
+            <div class="shot" style="--g1: #6366f1; --g2: #22d3ee">
+              <span>Preview</span>
+            </div>
+            <div class="p-body">
+              <h3>Project One</h3>
+              <p>
+                Short description of what this project does and the problem it
+                solves.
+              </p>
+              <div class="chips small">
+                <span class="chip">HTML</span><span class="chip">CSS</span
+                ><span class="chip">JavaScript</span>
+              </div>
+              <div class="p-links">
+                <a
+                  href="https://github.com/your-username/project-one"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub ↗</a
+                ><a href="#" target="_blank" rel="noopener">Live Demo ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="shot" style="--g1: #f472b6; --g2: #f59e0b">
+              <span>Preview</span>
+            </div>
+            <div class="p-body">
+              <h3>Project Two</h3>
+              <p>
+                Short description of your second project, for example a school
+                activity or system.
+              </p>
+              <div class="chips small">
+                <span class="chip">Python</span><span class="chip">MySQL</span>
+              </div>
+              <div class="p-links">
+                <a
+                  href="https://github.com/your-username/project-two"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub ↗</a
+                ><a href="#" target="_blank" rel="noopener">Live Demo ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="shot" style="--g1: #10b981; --g2: #3b82f6">
+              <span>Preview</span>
+            </div>
+            <div class="p-body">
+              <h3>Project Three</h3>
+              <p>Short description of your third project or ongoing work.</p>
+              <div class="chips small">
+                <span class="chip">React</span
+                ><span class="chip">Tailwind</span>
+              </div>
+              <div class="p-links">
+                <a
+                  href="https://github.com/your-username/project-three"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub ↗</a
+                ><a href="#" target="_blank" rel="noopener">Live Demo ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="center reveal">
+          <a
+            class="btn primary"
+            href="https://github.com/your-username"
+            target="_blank"
+            rel="noopener"
+            >See all repositories on GitHub ↗</a
+          >
+        </div>
+      </section>
+
+      <!-- 10. EXPERIENCE -->
+      <section id="experience">
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="timeline">
+          <div class="t-item reveal">
+            <span class="dot"></span>
+            <div class="card">
+              <span class="date">2025 – Present</span>
+              <h3>Member, IT Student Organization</h3>
+              <p>
+                Participated in school activities, tech events, and
+                peer-learning sessions.
+              </p>
+            </div>
+          </div>
+          <div class="t-item reveal">
+            <span class="dot"></span>
+            <div class="card">
+              <span class="date">2024</span>
+              <h3>Academic Projects</h3>
+              <p>
+                Built web and database projects in a team, handling front-end
+                design and version control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. ACHIEVEMENTS -->
+      <section id="achievements">
+        <h2 class="section-title reveal">Achievements &amp; Certifications</h2>
+        <div class="grid ach-grid">
+          <div class="card reveal">
+            <span class="ico">🏆</span>
+            <h3>Dean's Lister</h3>
+            <p>Academic excellence, Year 2</p>
+          </div>
+          <div class="card reveal">
+            <span class="ico">📜</span>
+            <h3>Web Development Certificate</h3>
+            <p>Issuer name, 2025</p>
+          </div>
+          <div class="card reveal">
+            <span class="ico">🎤</span>
+            <h3>IT Seminar Attendee</h3>
+            <p>Event name, 2025</p>
+          </div>
+          <div class="card reveal">
+            <span class="ico">🛠️</span>
+            <h3>Hackathon Participant</h3>
+            <p>Event name, 2025</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6, 7, 8. CONTACT & LINKS -->
+      <section id="contact">
+        <h2 class="section-title reveal">Let's Connect</h2>
+        <p class="center-text reveal">
+          Open to internship, freelance, and entry-level opportunities.
+        </p>
+        <div class="socials reveal">
+          <a
+            class="social"
+            href="https://github.com/your-username"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          <a
+            class="social"
+            href="https://www.linkedin.com/in/your-username"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a
+            class="social"
+            href="https://facebook.com/your-username"
+            target="_blank"
+            rel="noopener"
+            >Facebook</a
+          >
+          <a
+            class="social"
+            href="https://instagram.com/your-username"
+            target="_blank"
+            rel="noopener"
+            >Instagram</a
+          >
+          <a class="social" href="mailto:youremail@example.com">Email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Your Full Name. Built with HTML, CSS &amp;
+      JavaScript.
+    </footer>
+    <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
